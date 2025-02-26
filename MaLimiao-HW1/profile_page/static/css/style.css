@@ -1,0 +1,84 @@
+/* static/css/style.css */
+
+/* 设置页面整体背景为粉紫色渐变 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, #f7d1f7, #e0a3fc);
+    color: #333;
+}
+
+/* 简历容器 */
+.resume-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+/* 页眉背景设置，标题 */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #ff88dd, #f085bb);
+    padding: 15px 0;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 3.2em;
+    color: white;
+}
+
+/* 个人信息部分 */
+.personal-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.personal-bio h2 {
+    font-size: 2.5em;
+    color: #d62092;
+}
+
+.personal-bio p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* 技能部分 */
+.skill {
+    background-color: #ff88dd;
+    color: white;
+    padding: 8px 15px;  /* 调整内边距，减少宽度 */
+    border-radius: 20px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: inline-block;  /* 让它只根据内容宽度显示 */
+    max-width: 150px;  /* 设置最大宽度 */
+    text-overflow: ellipsis;  /* 超出部分使用省略号表示 */
+    white-space: nowrap;  /* 不换行 */
+    overflow: hidden;  /* 隐藏超出的部分 */
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #888;
+    font-size: 1.2em;
+}

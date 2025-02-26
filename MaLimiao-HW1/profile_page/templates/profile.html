@@ -1,0 +1,81 @@
+<!-- templates/profile.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ profile.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>{{ profile.title }}</h1>
+        </header>
+        <section class="personal-info">
+            <div class="profile-image">
+                <img src="{{ profile.profile_image }}" alt="个人头像">
+            </div>
+            <div class="personal-bio">
+                <h2>{{ profile.name }}</h2>
+                <p>{{ profile.bio }}</p>
+            </div>
+        </section>
+        <section class="experience-section">
+            <h3>Personal Experience</h3>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <strong>Children's Programming Teacher</strong> (2021-2023) - Taught children programming and computer science concepts.
+                </div>
+                <div class="experience-item">
+                    <strong>ITMO University Student</strong> (2024-Present) - Currently studying Information Security at ITMO.
+                </div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <h3>Computer Skills</h3>
+            <div class="skills-list">
+                {% for skill in profile.skills %}
+                    <div class="skill">{{ skill }}</div>
+                {% endfor %}
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Ma Limiao Personal Homepage.</p>
+        </footer>
+    </div>
+    <script>
+        // 创建掉落效果
+        document.addEventListener('DOMContentLoaded', () => {
+          setInterval(() => {
+            const emojiArray = ['🌸', '💖', '✨', '🎀', '💗', '🍭'];
+            const emoji = document.createElement('div');
+            emoji.classList.add('falling-emoji');
+            emoji.textContent = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+            document.body.appendChild(emoji);
+      
+            emoji.style.left = Math.random() * window.innerWidth + 'px';
+            emoji.style.animationDuration = Math.random() * 2 + 3 + 's';
+      
+            setTimeout(() => emoji.remove(), 5000);
+          }, 300);
+        });
+      </script>
+      
+      <style>
+        .falling-emoji {
+          position: fixed;
+          top: -50px;
+          font-size: 2.5em;
+          animation: fall linear;
+          z-index: 100;
+        }
+      
+        @keyframes fall {
+          to {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+          }
+        }
+      </style>
+</body>
+</html>
