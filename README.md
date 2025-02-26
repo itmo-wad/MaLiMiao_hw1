@@ -8,13 +8,8 @@ This Flask-based web application in Python displays a static user profile page f
 - VScode, pycharm
 - Python 3.13.2
 
-## Run the application
+### Run the application
    ```bash
    python app.py
    ```bash
    Visit http://127.0.0.1:5000/ to view the profile page.
-
-## Introduction
-- Front-end: Developed a static profile page using HTML for structure and CSS for styling.
-- Profile page includes: title, name, photo, personal experience, computer skills
-- Back-end: Use Python Flask to implement the back-end to serve the front-end
