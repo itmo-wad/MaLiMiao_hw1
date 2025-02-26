@@ -11,5 +11,5 @@ This Flask-based web application in Python displays a static user profile page f
 ### Run the application
    ```bash
    python app.py
-   '''bash
+   ```
    Visit http://127.0.0.1:5000/ to view the profile page.
